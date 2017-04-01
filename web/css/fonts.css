@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'CaviarDreams';
+  font-weight: 400;
+  src:url('CaviarDreams.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'CaviarDreams-';
+  font-weight: 400;
+  src:url('CaviarDreams-c.ttf') format('truetype');
+}
+a{
+  
+  decoration:none;
+}

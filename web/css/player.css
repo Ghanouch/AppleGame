@@ -1,0 +1,439 @@
+.body{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+.slog{
+	width: 100%;
+	display: : none;
+	position: fixed;
+	top: 20px;
+	text-align: center;
+	font-family: 'CaviarDreams-';
+	color: white;
+	font-size: 18px;
+	z-index: 200000;
+}
+#finTranche{
+	z-index: 11111111;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	background: black;
+	opacity: 0.9;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	font-size: 25px;
+	color: white;
+	font-family: 'CaviarDreams-';
+}
+.report{
+	position: absolute;
+	background-image: url(../pictures/ic_local_print_shop_white_18dp.png);
+	width: 54px;
+	height: 54px;
+	opacity: 1;
+	cursor: pointer;
+	margin-left: -25px;
+}
+.messageFin{
+	margin-top: 250px;
+	padding: 30px;
+}
+.header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 55px;
+	background : #353535;
+}
+.id{
+	position: relative;
+	margin-top: 7.5px;
+	margin-left: 10px;
+	width: all;
+	height: auto;
+	color: white;
+	font-family: 'CaviarDreams-';
+	font-size: 20px;
+}
+.idd{
+	display: inline-block;
+}
+.IDimage{
+	height: 55px;
+	width: 55px;
+	line-height: 55px;
+	background : #1c7c92;
+	border-radius: 100px;
+	text-align: center;
+	font-size: 25px;
+}
+.rightHeader{
+	float: right;
+}
+.parties{
+	border-radius: 5px;
+	text-align: center;
+	font-family: arial;
+	padding-bottom: 10px;
+	padding-top: 15px;
+	padding-right: 10px;
+}
+.heart{
+	color: #ff3161;
+	font-family: 'CaviarDreams-',arial;
+	font-size: 30px;
+	width: 30px;
+	height: 32px;
+	background-image: url(../pictures/partyAlive.png);
+	margin-left: 5px;
+	margin-right: 5px;
+	display: inline-block;
+}
+.dead{
+	background-image: url(../pictures/partyDead.png);
+}
+.timer{
+	position: relative;
+	bottom: 7px;
+	color: white;
+	font-family: 'CaviarDreams-',arial;
+	font-size: 20px;
+}
+.close{
+	position: relative;
+	top: 7px;
+	font-size: 24px;
+	width: 24px;
+	height: 24px;
+	background-image: url(../pictures/close.png);
+	margin: 10px;
+	margin-top: 0px;
+	cursor: pointer;
+}
+.wrapper{
+	position: relative;
+	top :47px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.rapport{
+	position: absolute;
+	right: 0px;
+	top: 5px;
+	background-image: url(../pictures/ic_local_print_shop_black_18dp.png);
+	width: 50px;
+	height: 50px;
+	opacity: 0.2;
+	cursor: pointer;
+}
+.rapport:hover{
+	opacity: 0.5;
+}
+.card{
+	background:#1d7d93;
+	width: 300px;
+	height: 50px;
+	display: inline-block;
+	color: white;
+	font-family: 'CaviarDreams-',arial;
+	font-size: 20px;
+	line-height: 50px;
+	margin-bottom: 10px;
+	z-index: 3;
+	border-radius: 0 0 10px 10px;
+}
+.Bra7{
+	margin: 10px;
+}
+.Bra7 .slogon input{
+	position: relative;
+	border: none;
+	color: white;
+	font-family: 'CaviarDreams-',arial;
+	text-align: center;
+	font-size: 20px;
+	height: 50px;
+	width: 300px;
+	background: #65ba9d;
+	border-radius: 10px 0px 0px 10px;
+  outline: 0;
+}
+.micro img{
+	opacity: 0.5;
+}
+.micro{
+	position: relative;
+	top: 2px;
+	right: 4px;
+	background: #44997c;
+	padding: 12px;
+	border-radius: 0px 10px 10px 0px;
+	cursor: pointer;
+}
+.validate{
+	position: relative;
+	cursor: pointer;
+	top: 7px;
+	width: 32px;
+	height: 32px;
+	background-image: url(../pictures/validate.png);
+}
+input::-webkit-input-placeholder {
+    color:#FFF;
+    opacity: 0.7;
+}
+input::-moz-placeholder {
+    color:#FFF;
+    opacity: 0.7;
+}
+input:-moz-placeholder {
+    color:#FFF
+    opacity: 0.7;;
+}
+input::-ms-input-placeholder {
+    color:#FFF;
+    opacity: 0.7;
+}
+.game{
+	box-shadow: 0px 0px 3px #282828;
+	width: 100%;
+	height: 550px;
+}
+.playersList{
+	float: left;
+	height: 100%;
+	overflow-y: scroll;
+}
+.chatHeads{
+	height: 100%;
+	margin-top: 30px;
+	max-width: 700px;
+	#
+}
+.head{
+	height: 100px;
+	width: 100px;
+	background: #eca941;
+	border-radius: 50px;
+	margin: 5px;
+	color: white;
+	font-family: 'CaviarDreams-',arial;
+	text-align: center;
+	font-size: 50px;
+	line-height: 100px;
+	cursor: pointer;
+}
+.player{
+	cursor: pointer;
+	padding: 2px;
+}
+.player .img{
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	color : white;
+	background: #eca941;
+	font-family: 'CaviarDreams-',arial;
+}
+.player .name{
+	width: 150px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 50px;
+	line-height: 50px;
+	color : black;
+	background: #efefef;
+	font-family: 'CaviarDreams-',arial;
+}
+.chat{
+	position: absolute;
+	display: none;
+	margin: 10px;
+	height : 300px;
+	width: 500px;
+	background: #f5f5f5;
+	box-shadow: 0px 0px 2px black;
+	border-radius: 3px;
+	z-index: 150;
+}
+
+.chat .negociate{
+	height: 48px;
+	background: white;
+	border-top: 1px #b8b8b8 solid;
+}
+.chat .negociate .negociateOptions{
+	margin-top: 10px;
+	float: right;
+	margin-right: 5px;
+}
+.chat .negociate .price{
+	height: 32px;
+	font-family: 'CaviarDreams',arial;
+	font-size: 20px;
+	opacity: 0.7;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: px;
+}
+.plus,.minus{
+	cursor: pointer;
+}
+.chat .negociate .validateParice{
+	margin-top: -10px;
+	margin-bottom: -10px;
+	width: 32px;
+	height: 32px;
+	background-image: url(../pictures/validate.png);
+	cursor: pointer;
+}
+.chat .negociate .suggest{
+	margin-top: -10px;
+	margin-bottom: -10px;
+	width: 32px;
+	height: 32px;
+	background-image: url(../pictures/suggest.png);
+	cursor: pointer;
+}
+.chat .negociate .send{
+	margin-top: -10px;
+	margin-bottom: -10px;
+	width: 32px;
+	height: 32px;
+	background-image: url(../pictures/send.png);
+	cursor: pointer;
+}
+.chat .negociate input{
+	font-family: 'CaviarDreams',arial;
+	font-size: 16px;
+	margin-left:10px;
+	float: left;
+	border: none;
+	width: 300px;
+	height: 45px;
+	outline: 0;
+}
+
+.chat .chatBody{
+	padding: 0px;
+	background: #dfdfdf;
+	height: 200px;
+	overflow-y: scroll;
+}
+.chatBody .headChatMessage{
+	float: left;
+	border-radius: 0;
+	font-size: 18px;
+	width: 50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color : white;
+	background: #eca941;
+	font-family: 'CaviarDreams-',arial;
+
+}
+.chatBody .msgLeft,.msgRight{
+	margin: 7px;
+}
+.msgRight .headChatMessage{
+	float: right;
+}
+.chatBody .message{
+	font-size: 18px;
+	width: 400px;
+	min-height: 50px;
+	color : black;
+	background: white;
+	font-family: 'CaviarDreams',arial;
+	text-align: justify;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.chat .Chatheader{
+	border-bottom: 1px #b8b8b8 solid;
+	border-radius: 3px 3px 0px 0px;
+	background: white;
+	height: 50px;
+	cursor: hand;
+}
+.chat .Chatname{
+	margin-left: 10px;
+	font-family: 'CaviarDreams',arial;
+	font-size: 16px;
+	float: left;
+	line-height: 50px;
+	opacity: 0.8;
+}
+.chat .Chatclose{
+	position: relative;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	line-height: 50px;
+	float: right;
+	width: 24px;
+	height: 24px;
+	opacity: 0.7;
+	background-image: url(../pictures/closeB.png);
+}
+.chat .Chatmin{
+	position: relative;
+	top: 10px;
+	right: 20px;
+	cursor: pointer;
+	line-height: 50px;
+	float: right;
+	width: 24px;
+	height: 24px;
+	opacity: 0.7;
+	background-image: url(../pictures/minB.png);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #484848;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #484848;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently*/
+}
+.us{
+	margin-top: 15px;
+	font-family: 'CaviarDreams',arial;
+	font-size: 18px;
+}
+.green{
+	background:#1fca95;
+}
+.clients{
+	margin-top: 10px;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 50%;
+	float: right;
+	background: black;
+	color: white;
+	opacity: 0.3;
+}

@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Transaction" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="22e468ae-7a9f-4926-b3ae-85e5d60f89d3">
+	<property name="ireport.zoom" value="0.9090909090909105"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select (select count(*) from transaction where prixtransaction=100 and tranche=1) as 100_1 ,
+       (select count(*) from transaction where prixtransaction=100 and tranche=2) as 100_2 ,
+       (select count(*) from transaction where prixtransaction=100 and tranche=3) as 100_3 ,
+       (select count(*) from transaction where prixtransaction=95 and tranche=1) as 95_1 ,
+       (select count(*) from transaction where prixtransaction=95 and tranche=2) as 95_2 ,
+       (select count(*) from transaction where prixtransaction=95 and tranche=3) as 95_3 ,
+       (select count(*) from transaction where prixtransaction=90 and tranche=1) as 90_1 ,
+       (select count(*) from transaction where prixtransaction=90 and tranche=2) as 90_2 ,
+       (select count(*) from transaction where prixtransaction=90 and tranche=3) as 90_3 ,
+       (select count(*) from transaction where prixtransaction=85 and tranche=1) as 85_1 ,
+       (select count(*) from transaction where prixtransaction=85 and tranche=2) as 85_2 ,
+       (select count(*) from transaction where prixtransaction=85 and tranche=3) as 85_3 ,
+       (select count(*) from transaction where prixtransaction=80 and tranche=1) as 80_1 ,
+       (select count(*) from transaction where prixtransaction=80 and tranche=2) as 80_2 ,
+       (select count(*) from transaction where prixtransaction=80 and tranche=3) as 80_3 ,
+       (select count(*) from transaction where prixtransaction=75 and tranche=1) as 75_1 ,
+       (select count(*) from transaction where prixtransaction=75 and tranche=2) as 75_2 ,
+       (select count(*) from transaction where prixtransaction=75 and tranche=3) as 75_3 ,
+       (select count(*) from transaction where prixtransaction=70 and tranche=1) as 70_1 ,
+       (select count(*) from transaction where prixtransaction=70 and tranche=2) as 70_2 ,
+       (select count(*) from transaction where prixtransaction=70 and tranche=3) as 70_3 ,
+       (select count(*) from transaction where prixtransaction=65 and tranche=1) as 65_1 ,
+       (select count(*) from transaction where prixtransaction=65 and tranche=2) as 65_2 ,
+       (select count(*) from transaction where prixtransaction=65 and tranche=3) as 65_3 ,
+       (select count(*) from transaction where prixtransaction=60 and tranche=1) as 60_1 ,
+       (select count(*) from transaction where prixtransaction=60 and tranche=2) as 60_2 ,
+       (select count(*) from transaction where prixtransaction=60 and tranche=3) as 60_3 ,
+       (select count(*) from transaction where prixtransaction=55 and tranche=1) as 55_1 ,
+       (select count(*) from transaction where prixtransaction=55 and tranche=2) as 55_2 ,
+       (select count(*) from transaction where prixtransaction=55 and tranche=3) as 55_3 ,
+       (select count(*) from transaction where prixtransaction=50 and tranche=1) as 50_1 ,
+       (select count(*) from transaction where prixtransaction=50 and tranche=2) as 50_2 ,
+       (select count(*) from transaction where prixtransaction=50 and tranche=3) as 50_3 ,
+       (select count(*) from transaction where prixtransaction=45 and tranche=1) as 45_1 ,
+       (select count(*) from transaction where prixtransaction=45 and tranche=2) as 45_2 ,
+       (select count(*) from transaction where prixtransaction=45 and tranche=3) as 45_3 ,
+       (select count(*) from transaction where prixtransaction=40 and tranche=1) as 40_1 ,
+       (select count(*) from transaction where prixtransaction=40 and tranche=2) as 40_2 ,
+       (select count(*) from transaction where prixtransaction=40 and tranche=3) as 40_3 ,
+       (select count(*) from transaction where prixtransaction=35 and tranche=1) as 35_1 ,
+       (select count(*) from transaction where prixtransaction=35 and tranche=2) as 35_2 ,
+       (select count(*) from transaction where prixtransaction=35 and tranche=3) as 35_3 ,
+       (select count(*) from transaction where prixtransaction=30 and tranche=1) as 30_1 ,
+       (select count(*) from transaction where prixtransaction=30 and tranche=2) as 30_2 ,
+       (select count(*) from transaction where prixtransaction=30 and tranche=3) as 30_3 ,
+       (select count(*) from transaction where prixtransaction=25 and tranche=1) as 25_1 ,
+       (select count(*) from transaction where prixtransaction=25 and tranche=2) as 25_2 ,
+       (select count(*) from transaction where prixtransaction=25 and tranche=3) as 25_3 ,
+       (select count(*) from transaction where prixtransaction=20 and tranche=1) as 20_1 ,
+       (select count(*) from transaction where prixtransaction=20 and tranche=2) as 20_2 ,
+       (select count(*) from transaction where prixtransaction=20 and tranche=3) as 20_3 ,
+       (select count(*) from transaction where prixtransaction=15 and tranche=1) as 15_1 ,
+       (select count(*) from transaction where prixtransaction=15 and tranche=2) as 15_2 ,
+       (select count(*) from transaction where prixtransaction=15 and tranche=3) as 15_3 ,
+       (select count(*) from transaction where prixtransaction=10 and tranche=1) as 10_1 ,
+       (select count(*) from transaction where prixtransaction=10 and tranche=2) as 10_2 ,
+       (select count(*) from transaction where prixtransaction=10 and tranche=3) as 10_3
+       from transaction;]]>
+	</queryString>
+	<field name="100_1" class="java.lang.Long"/>
+	<field name="100_2" class="java.lang.Long"/>
+	<field name="100_3" class="java.lang.Long"/>
+	<field name="95_1" class="java.lang.Long"/>
+	<field name="95_2" class="java.lang.Long"/>
+	<field name="95_3" class="java.lang.Long"/>
+	<field name="90_1" class="java.lang.Long"/>
+	<field name="90_2" class="java.lang.Long"/>
+	<field name="90_3" class="java.lang.Long"/>
+	<field name="85_1" class="java.lang.Long"/>
+	<field name="85_2" class="java.lang.Long"/>
+	<field name="85_3" class="java.lang.Long"/>
+	<field name="80_1" class="java.lang.Long"/>
+	<field name="80_2" class="java.lang.Long"/>
+	<field name="80_3" class="java.lang.Long"/>
+	<field name="75_1" class="java.lang.Long"/>
+	<field name="75_2" class="java.lang.Long"/>
+	<field name="75_3" class="java.lang.Long"/>
+	<field name="70_1" class="java.lang.Long"/>
+	<field name="70_2" class="java.lang.Long"/>
+	<field name="70_3" class="java.lang.Long"/>
+	<field name="65_1" class="java.lang.Long"/>
+	<field name="65_2" class="java.lang.Long"/>
+	<field name="65_3" class="java.lang.Long"/>
+	<field name="60_1" class="java.lang.Long"/>
+	<field name="60_2" class="java.lang.Long"/>
+	<field name="60_3" class="java.lang.Long"/>
+	<field name="55_1" class="java.lang.Long"/>
+	<field name="55_2" class="java.lang.Long"/>
+	<field name="55_3" class="java.lang.Long"/>
+	<field name="50_1" class="java.lang.Long"/>
+	<field name="50_2" class="java.lang.Long"/>
+	<field name="50_3" class="java.lang.Long"/>
+	<field name="45_1" class="java.lang.Long"/>
+	<field name="45_2" class="java.lang.Long"/>
+	<field name="45_3" class="java.lang.Long"/>
+	<field name="40_1" class="java.lang.Long"/>
+	<field name="40_2" class="java.lang.Long"/>
+	<field name="40_3" class="java.lang.Long"/>
+	<field name="35_1" class="java.lang.Long"/>
+	<field name="35_2" class="java.lang.Long"/>
+	<field name="35_3" class="java.lang.Long"/>
+	<field name="30_1" class="java.lang.Long"/>
+	<field name="30_2" class="java.lang.Long"/>
+	<field name="30_3" class="java.lang.Long"/>
+	<field name="25_1" class="java.lang.Long"/>
+	<field name="25_2" class="java.lang.Long"/>
+	<field name="25_3" class="java.lang.Long"/>
+	<field name="20_1" class="java.lang.Long"/>
+	<field name="20_2" class="java.lang.Long"/>
+	<field name="20_3" class="java.lang.Long"/>
+	<field name="15_1" class="java.lang.Long"/>
+	<field name="15_2" class="java.lang.Long"/>
+	<field name="15_3" class="java.lang.Long"/>
+	<field name="10_1" class="java.lang.Long"/>
+	<field name="10_2" class="java.lang.Long"/>
+	<field name="10_3" class="java.lang.Long"/>
+	<pageHeader>
+		<band height="537" splitType="Stretch">
+			<staticText>
+				<reportElement x="452" y="73" width="117" height="30" uuid="fe2a0fa0-1748-4189-a355-0f041544827f"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Manche 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="73" width="117" height="30" uuid="2c5112eb-0470-4dbe-9fbf-fc4734d60b50"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Manche 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="73" width="117" height="30" uuid="bd32ff5b-3c4b-423b-9c47-19d4c6be4142"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Prix]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="655" y="73" width="117" height="30" uuid="ccda2936-fb73-4c23-9fac-bebe12e1f976"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#003333"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Manche 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="356" width="117" height="20" uuid="7e0a5fa9-04ff-453e-ada1-d86e4f516268"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[45]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="246" y="473" width="117" height="20" uuid="9ec007eb-6452-4e14-ac26-63854acd2f9e"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{15_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="196" width="117" height="20" uuid="2d7cc2db-4ddb-4c98-9760-586e373e3d95"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{85_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="473" width="117" height="20" uuid="20d48908-9817-4b13-970b-abe71ddd09c7"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="655" y="256" width="117" height="20" uuid="3c6c9198-5487-4aa5-a582-08ccb1304135"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{70_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="136" width="118" height="20" uuid="b7e8d65d-5170-4eb0-9e3e-2bb4c403311d"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{100_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="276" width="117" height="20" uuid="c5ee1730-b927-4da0-87ce-25e9d8933abe"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{65_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="236" width="117" height="20" uuid="a7902af9-01bd-4f4f-9c57-59ebe288c057"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[75]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="433" width="117" height="20" uuid="557d667f-4bac-4238-824a-965c2d3b6004"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[25]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="316" width="117" height="20" uuid="433e2021-53a7-4d4d-8678-60ac4962bf0c"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[55]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="452" y="236" width="117" height="20" uuid="bc310e80-e870-4354-be5e-de692afbf7a4"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{75_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="493" width="117" height="17" uuid="2b2daf88-7fed-4967-9c2d-bde6aaf84cf3"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="452" y="376" width="117" height="20" uuid="d8cb7eed-18ad-433e-9d17-78fa2f80316f"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{40_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="296" width="117" height="20" uuid="7d40e0a4-3213-4f8c-abe7-aeb61adc1098"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{60_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="156" width="117" height="20" uuid="223315e7-b16f-400f-8c26-0f86652bd107"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{95_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="473" width="117" height="20" uuid="af9d05cc-f74d-47c3-a3cc-ee9b65219d74"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{15_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="316" width="117" height="20" uuid="dd790336-35c9-4763-aff8-d9c3e9c75cec"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{55_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="256" width="117" height="20" uuid="5fce6cbe-8da1-4aef-8180-45ad03fd40aa"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[70]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="176" width="117" height="20" uuid="cc10ac22-9797-4047-9249-35f43c30233c"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[90]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="655" y="216" width="117" height="20" uuid="b26f4ad9-9852-4876-b930-1cedde0b19df"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{80_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="236" width="117" height="20" uuid="58788967-f5fd-4b09-9fb8-3fca04581c76"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{75_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="316" width="117" height="20" uuid="21cf24ef-7b46-4b34-a088-8329323c433a"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{55_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="216" width="118" height="20" uuid="667a9ebb-7277-4747-a660-c4fee24ea9ee"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{80_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="493" width="117" height="17" uuid="30bd8d33-f0b1-4c61-a42c-ea772618d2d6"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{10_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="433" width="117" height="20" uuid="709fef38-0978-4e0b-bb95-bde2f88ee40d"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{25_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="156" width="117" height="20" uuid="241b01e7-8400-4cfc-8f06-4d448ad61e98"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{95_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="196" width="117" height="20" uuid="65c0c49c-b451-4715-8eaf-711fa3f3813c"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[85]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="655" y="136" width="117" height="20" uuid="2c25af3f-5b48-4aa3-bd9e-3bc9d629f5e4"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{100_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="216" width="117" height="20" uuid="70cbf1b5-623a-48a5-9a8f-941ef82ca04a"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{80_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="256" width="117" height="20" uuid="1ceddf41-9772-4a60-a5ff-87129ccea0df"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{70_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="236" width="118" height="20" uuid="8693ac31-dbd2-4bc8-8cf3-84149733a0f9"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{75_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="433" width="117" height="20" uuid="f9083552-2b54-42d4-8273-c9b96714f223"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{25_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="396" width="117" height="20" uuid="2320b17c-c31d-4177-8508-fd85c95e16b4"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[35]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="245" y="156" width="118" height="20" uuid="0732b365-4147-42ba-8e6e-feb19f024c12"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{95_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="276" width="117" height="20" uuid="da82306b-5f91-4000-b117-f54d2fac1163"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[65]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="136" width="117" height="20" uuid="bfded02b-3a22-436b-86f2-b15bada00895"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[100]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="452" y="416" width="117" height="17" uuid="f8d83a4d-a7d2-4ac9-968f-f642d248fca5"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{30_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="296" width="117" height="20" uuid="08ef1f71-6a89-4d7e-8730-607b4a805ce4"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{60_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="376" width="117" height="20" uuid="06b5573a-d0be-4da3-909f-080a95393e7c"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{40_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="356" width="117" height="20" uuid="25be45f3-200c-478b-8ccc-6f4ba815d628"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{45_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="276" width="117" height="20" uuid="934102dc-452e-4a27-8166-f407cfc70ce6"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{65_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="396" width="117" height="20" uuid="d0986734-359c-447c-b779-406cbb7a82ee"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{35_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="176" width="117" height="20" uuid="a9965527-fada-466d-a527-e9dd13ced8da"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{90_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="336" width="117" height="20" uuid="4ed86bb9-cc98-4a8d-a84e-3848b7916c05"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{50_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="396" width="117" height="20" uuid="88da55ac-669f-45c2-b382-7afbf5e584fd"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{35_3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="156" width="117" height="20" uuid="f128d203-cfa5-4dda-a6f1-d48adcbaa7a5"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[95]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="452" y="276" width="117" height="20" uuid="b5678684-dce4-4df0-98f9-294d63c6d0c7"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{65_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="416" width="117" height="17" uuid="0b618db5-c5ef-4e09-8896-a0edbdaca7f6"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{30_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="493" width="117" height="17" uuid="92904e13-aaf0-4a55-8430-2455249a34f0"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{10_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="453" width="117" height="20" uuid="aca877d3-114a-41fe-9128-af8504ebdf42"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[20]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="655" y="473" width="117" height="20" uuid="63cfb6a7-72ae-48f3-ae40-64882fc728ff"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{15_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="136" width="117" height="20" uuid="56197788-63d9-46af-b31b-4303cd631fb6"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{100_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="453" width="117" height="20" uuid="4bb36a00-7925-446a-9ac8-bf291dcd9ace"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{20_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="416" width="117" height="17" uuid="9acfd812-cbac-4fde-873f-2421b452ce05"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{30_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="396" width="117" height="20" uuid="2daba577-dc9c-49da-93a2-49e5d6344e2b"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{35_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="453" width="117" height="20" uuid="90bf292f-d0f1-41af-babe-37c33c5d862e"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{20_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="433" width="117" height="20" uuid="19be8855-f3f3-4bfe-ab85-cb540f9430cb"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{25_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="296" width="117" height="20" uuid="5c008e0d-529c-4858-b1ea-f1594064fea2"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[60]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="246" y="336" width="117" height="20" uuid="4cff9399-2eff-41c5-8d2d-018ab9d45741"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{50_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="376" width="117" height="20" uuid="635ef912-8825-4caa-b3f9-0700b81553b9"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{40_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="356" width="117" height="20" uuid="ea35647d-75e5-4e22-98c1-2fca61716694"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{45_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="493" width="117" height="17" uuid="01984bec-0bc7-4a9c-b8ec-c5fc0c2bf0e0"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{10_3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="336" width="117" height="20" uuid="5b0469fc-a399-4337-a8a7-e2b8157ed9e8"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[50]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="246" y="356" width="117" height="20" uuid="1f3ff4bf-37ed-4de8-9f1d-dff73e4761de"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{45_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="296" width="117" height="20" uuid="18db08ec-349a-4e5f-9bb0-b386865d2932"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{60_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="176" width="118" height="20" uuid="9a3e853c-a22f-46ce-8bac-f4350199d364"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{90_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="376" width="117" height="20" uuid="8c16a449-0c9f-4b5d-a3e7-67c132ca562b"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[40]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="452" y="316" width="117" height="20" uuid="e64c820c-e6e7-4146-b841-d6cce27cd397"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{55_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="416" width="117" height="17" uuid="b0616e3d-4252-496f-87a5-5592bafdda05"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[30]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="452" y="176" width="117" height="20" uuid="57ca441b-1239-410f-8130-d54a636d8a3a"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{90_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="256" width="117" height="20" uuid="b175d949-bc81-42c1-b02a-9680aca8fd44"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{70_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="196" width="117" height="20" uuid="20d1a378-62be-40e4-a14d-73abe6a312dd"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#00FFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{85_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="196" width="117" height="20" uuid="cd216551-67f9-4f21-bab3-008cb5dad67a"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{85_3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="216" width="117" height="20" uuid="16b5dffe-17e4-4a35-b9f9-ed0dffc896a8"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#FF0000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[80]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="655" y="336" width="117" height="20" uuid="1c4b69b8-24f3-4542-b049-64f4be02fef3"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#FF0066"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{50_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="453" width="117" height="20" uuid="a6d02bb1-8e90-4de4-ad92-61c1daf2a198"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted" lineColor="#CCCCFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{20_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="225" y="0" width="319" height="43" uuid="9bfdf3c5-cc32-4f8b-8c72-b04e2418d983"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.75" lineStyle="Double" lineColor="#FFCCCC"/>
+					<topPen lineWidth="0.75" lineStyle="Double" lineColor="#FFCCCC"/>
+					<leftPen lineWidth="0.75" lineStyle="Double" lineColor="#FFCCCC"/>
+					<bottomPen lineWidth="0.75" lineStyle="Double" lineColor="#FFCCCC"/>
+					<rightPen lineWidth="0.75" lineStyle="Double" lineColor="#FFCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Tableau des transactions de la  classe -- Big Apple]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+</jasperReport>
