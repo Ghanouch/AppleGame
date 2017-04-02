@@ -1,3 +1,5 @@
 Un jeu en ligne simulant un espace de vente et d’achat de produit :
 Project descriptionL’objectif de ce projet est de développer une application web qui permet de construire un marché virtuelle où les offreurs (Vendeurs) et les demandeurs(Acheteurs) peuvent échanger de messages , négocier des prix et valider des transactions .Ainsi participer concrètement à des transactions marchandes simples permet en revanche de faciliter l’accès à l’étude de la coordination marchande. (Favoriser l’apprentissage).
 Technologies : Php , JavaScript(Ajax , JQUERY) , iReport , Xamp , Mysql , NODE JS
+
+Usr Guide.pdf vous aide à l installation et à l utilisation de l'application !
